@@ -1,0 +1,246 @@
+{
+%
+load
+static
+%
+}
+
+.top-home {
+    margin-top: 230px;
+}
+
+input:focus {
+    background-color: #212123;
+!important;
+}
+
+.top-contacts {
+    padding-top: 90px;
+}
+/* ============ Image Style ============ */
+/* --- image 50/50 --- */
+.image-style {
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+}
+
+/* --- image inline --- */
+.home-amen {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- image inline --- */
+.dev-img {
+    height: auto;
+    width: 35vh;
+}
+
+.dev-logo {
+    height: auto;
+    width: 100%;
+}
+
+/* ============ /Image Style ============ */
+
+/* ============ TUMBLERS ============ */
+.tumbler-on-992 {
+    display: block;
+}
+
+.tumbler-off-992 {
+    display: none;
+}
+
+.tumbler-off {
+    display: none;
+}
+
+/* ============ /TUMBLERS ============ */
+
+
+
+
+/* ============ Background image ============ */
+img.background {
+    min-height: 100%;
+    min-width: 640px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* --- COLOR --- */
+.my-back {
+    background-color: rgba(54, 53, 53, 0.82);
+}
+
+.my-back-2 {
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+.my-back-contact {
+    background-color: #212123;
+}
+
+.home-back {
+    background-color: rgba(255, 255, 255, 0.62);
+}
+
+/* ============ /Background image ============ */
+
+
+/* ============ BUTTONS ============ */
+/* --- Brown HOME --- */
+.but-brown-home {
+    background-color: #000000;
+    border: 3px solid #000000;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.but-brown-home:hover {
+    background-color: #2b2b2b;
+    border: 3px solid #2b2b2b;
+    color: white !important;
+    transition-duration: 0.5s;
+}
+
+.but-brown-home:active {
+    background-color: #000000;
+    border: 3px dotted #000000;
+    color: #ffffff;
+}
+
+/* --- Brown Radius --- */
+.but-brown-rad {
+    background-color: #000000;
+    border: 3px solid #000000;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.but-brown-rad:hover {
+    background-color: #2b2b2b;
+    border: 3px solid #2b2b2b;
+    color: white;
+!important;
+    transition-duration: 0.5s;
+}
+
+.but-brown-rad:active {
+    background-color: #000000;
+    border: 3px dotted #000000;
+    color: #ffffff;
+}
+
+/* --- Grey Radius --- */
+.but-grey-home {
+    background-color: #242424;
+    border: 3px solid #242424;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.but-grey-home:hover {
+    border: 3px solid #333641D9;
+    background-color: rgba(48, 30, 119, 0.58);
+    color: white;
+!important;
+    transition-duration: 0.5s;
+}
+
+.but-grey-home:active {
+    background-color: #333641D9;
+    border: 3px dotted #333641D9;
+    color: #ffffff;
+}
+
+/* --- Brown But Contacts --- */
+.but-border-contact {
+    border: 1px solid #b8b897;
+!important;
+}
+
+.but-border-contact:hover {
+    border: 1px solid #ffffff;;
+!important;
+}
+
+.but-border-contact:active {
+    border: 1px solid #b8b897;
+!important;
+}
+
+/* ============ /BUTTONS ============ */
+
+
+/* ============ MEDIA ============ */
+/* --- max --- */
+@media only screen and (max-width: 1440px) {
+    .top-home {
+        margin-top: 220px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .top-home {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .tumbler-on-992 {
+        display: none;
+    }
+
+    .tumbler-off-992 {
+        display: block;
+    }
+
+    .image-style {
+        height: 80vh;
+    }
+
+    .top-home {
+        margin-top: 180px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .top-home {
+        margin-top: 130px;
+    }
+
+    .image-style {
+        height: 60vh;
+    }
+}
+
+/* ============ /MEDIA ============ */
+
+

@@ -1,0 +1,128 @@
+{% extends 'main/layout/header_footer.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+{% block activ-about %}active{% endblock %}
+{% block background %}<img src="{% static 'main/img/home.jpg' %}" class="background"/>{% endblock %}
+{% block st-bg %}position: absolute; width: 100%{% endblock %}
+
+{% block content %}
+
+    <section class="container-fluid my-back mx-0 mb-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-uppercase text-center">
+                <div class="container">
+                    <h2 class="display-4 mt-5 mb-3"><strong><b>about </b></strong><strong><b
+                            style="color: #b8b897;"> us</b></strong></h2>
+                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">
+                    <p class="fs-5 mb-3">St Regis Residences will give its residents the highest comfort thanks to
+                        carefully thought-out layouts designed taking into account cutting-edge trends in the
+                        construction of A-class houses.</p>
+                    <a href="{% url 'listings' %}">
+                        <button class="but-brown-rad mb-5">SHOW FLOORPLANS</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/88.jpg' %}" alt="Bentley Residences">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back mx-0 mb-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 text-uppercase text-center">
+                <div class="container">
+                    <h2 class="display-4 mt-5 mb-3"><b>location</b></h2>
+                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">
+                    <p class="fs-5 mb-3">490 royal residences in full decoration will be created for a chic life in the
+                        center of a modern world resort on the famous Collins Avenue. You will get to the sandy beach
+                        with a width of almost 100 meters just by going down from your apartment, and wellness
+                        sunbathing will be available daily.</p>
+                    <a href="{% url 'listings' %}">
+                        <button class="but-brown-rad mb-5">SHOW FLOORPLANS</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style" style="text-align: right;" src="{% static 'main/img/about/block2.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-uppercase text-center mt-5 mb-5">
+                <hr style="color: #b8b897; height: 2px; opacity: 1">
+                <p class="fs-5 mb-3 pt-2">The towers will be recognizable from afar thanks to the original contours and
+                    exterior. The full completion of the construction is planned for 2025.</p>
+                <hr style="color: #b8b897; height: 2px; opacity: 1">
+            </div>
+        </div>
+    </section>
+
+    {#    <section class="container-fluid my-back mx-0">#}
+    {#        <div class="row justify-content-end">#}
+    {#            <div class="col-lg-6 text-uppercase">#}
+    {#                <hr class="mb-3 mt-5" style="color: #b8b897; height: 1px; opacity: 1">#}
+    {#                <h3 class="display-6 mb-3">Lorem ipsum dolor sit amet.</h3>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur elit. Dolorum eos ex#}
+    {#                    labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, adipisicing elit. Dolorum eos ex#}
+    {#                    labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.#}
+    {#                    Dolorum eos ex labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.#}
+    {#                    Dolorum eos ex labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, adipisicing elit. Dolorum eos ex#}
+    {#                    labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum sit amet, consectetur adipisicing elit. Dolorum eos#}
+    {#                    ex labore minima </p>#}
+    {#            </div>#}
+    {#            <div class="col-lg-1"></div>#}
+    {#        </div>#}
+    {#    </section>#}
+    {##}
+    {#    <section class="container-fluid my-back mx-0">#}
+    {#        <div class="row justify-content-start">#}
+    {#            <div class="col-lg-1"></div>#}
+    {#            <div class="col-lg-6 text-uppercase">#}
+    {#                <hr class="mb-3 mt-5" style="color: #b8b897; height: 1px; opacity: 1">#}
+    {#                <h3 class="display-6 mb-3">Lorem ipsum dolor sit amet.</h3>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur elit. Dolorum eos ex#}
+    {#                    labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, adipisicing elit. Dolorum eos ex#}
+    {#                    labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.#}
+    {#                    Dolorum eos ex labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.#}
+    {#                    Dolorum eos ex labore minima </p>#}
+    {#                <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, adipisicing elit. Dolorum eos ex#}
+    {#                    labore minima </p>#}
+    {#                <p class="fs-5 mb-5">Lorem ipsum sit amet, consectetur adipisicing elit. Dolorum eos#}
+    {#                    ex labore minima </p>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+    {##}
+    {#    <section class="container-fluid my-back mx-0 mb-0">#}
+    {#        <div class="row align-items-center">#}
+    {#            <div class="col-lg-6 text-center text-uppercase">#}
+    {#                <div class="container" style="vertical-align: middle;">#}
+    {#                    <h2 class="display-4 mb-3"><b>Residences</b></h2>#}
+    {#                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">#}
+    {#                    <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur#}
+    {#                        adipisicing elit. Asperiores deserunt distinctio doloribus illo ipsum, natus nisi sed#}
+    {#                        soluta sunt ut.</p>#}
+    {#                    <a href="{% url 'about' %}">#}
+    {#                        <button class="but-brown-rad mb-3">SHOW FLOORPLANS</button>#}
+    {#                    </a>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <div class="col-lg-6 px-0">#}
+    {#                <img class="image-style" src="{% static 'main/img/88.jpg' %}" alt="Bentley Residences">#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+
+{% endblock %}

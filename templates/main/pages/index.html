@@ -1,0 +1,193 @@
+{% extends 'main/layout/header_footer.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block activ-home %}active{% endblock %}
+{% block background %}<img src="{% static 'main/img/home.jpg' %}" class="background"/>{% endblock %}
+{% block st-bg %}position: absolute; width: 100%{% endblock %}
+
+{% block content %}
+
+    <section class="container-fluid mx-0 mb-0" style="height: 95vh">
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center text-uppercase">
+                <h1 class="display-1 top-home mb-3" style="color: #131313"><strong>ST REGIS Residences</strong>
+                </h1>
+                <div class="col-lg-8 container text-center">
+                    <p class="home-back fs-5 mb-3" style="color: #4d3824; text-shadow: 1px 1px 15px white;">490 royal
+                        residences in full decoration will be created for a chic life in the center of a modern world
+                        resort on in Sunny Isles.
+                    </p>
+                    <a href="{% url 'listings' %}">
+                        <button class="but-brown-home mb-3">SHOW FLOORPLANS</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back">
+        <div class="row align-content-center justify-content-center">
+            <div class="col-lg-9 text-uppercase text-center mt-5 mb-5">
+                <h2 class="display-6 mb-3 mt-3">56-story towers on Collins Avenue</h2>
+                <hr style="color: #b8b897; height: 2px; opacity: 1">
+                <p class="fs-5 mb-3 pt-2">a new luxury complex of two exclusive waterfront residential towers with
+                    incredible views of the ocean, the green city and the coastal canal that stretches in the the center
+                    of Sunny Isles Beach (Florida).</p>
+                <hr class="tumbler-off-992" style="color: #b8b897; height: 2px; opacity: 1">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back mx-0 mb-0">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 text-uppercase text-center">
+                <div class="container">
+                    <h2 class="display-4 mb-3"><strong><b>about </b></strong><strong><b
+                            style="color: #b8b897;"> us</b></strong></h2>
+                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">
+                    <p class="fs-5 about-text mb-3">St Regis Residences will give its residents the highest comfort
+                        thanks to carefully thought-out layouts designed taking into account cutting-edge trends in the
+                        construction of A-class houses.</p>
+                    <a href="{% url 'about' %}">
+                        <button class="but-brown-rad text-uppercase mb-5">Learn more</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/88.jpg' %}" alt="Bentley Residences">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back mx-0 mb-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 text-uppercase text-center mt-5">
+                <div class="container">
+                    <h2 class="display-4 mb-3"><strong><b>Developers</b></strong></h2>
+                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">
+                    <p class="fs-5 mb-3">ST. REGIS RESIDENCES is a cooperative luxury condo project of Fortuned
+                        International Group and Chateau Group, renowned leaders in South Florida luxury real estate.</p>
+
+                    <a href="{% url 'developers' %}">
+                        <button class="but-brown-rad text-uppercase mb-5">Learn more</button>
+                    </a>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-12">
+                            <img class="mx-5 mb-5" style="height: 11vh"
+                                 src="{% static 'main/img/developers/logo2.png' %}"
+                                 alt="">
+                            <img class="mx-5 mb-5" style="height: 27vh"
+                                 src="{% static 'main/img/developers/logo.png' %}"
+                                 alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6  px-0">
+                <img class="image-style" src="{% static 'main/img/99.jpg' %}" alt="Bentley Residences">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back-2 mx-0 mb-0">
+        <div class="row align-items-center pt-4">
+            <div class="col-lg-12">
+                <div class="container text-uppercase text-center">
+                    <h1 class="display-5 mb-3 mt-3"><strong style="color: #333333"><b>Amenities</b></strong></h1>
+                    <p class="fs-5 mb-4" style="color: #333333"><b>St Regis Residences will include many leisure, sports
+                        and wellness facilities, such as a private beach club.</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back-2 pb-5 pt-3 tumbler-off-992">
+        <div class=" text-center">
+            <a href="{% url 'amenities' %}" class="" style="text-decoration: none">
+                <button class="fs-5 text-uppercase double-border-button but-brown-rad">learn more</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back-2 tumbler-on-992">
+        <div class="row pb-1 px-2">
+            <div class="col-6 col-lg-3 px-0">
+                <img class="home-amen" src="{% static 'main/img/555.jpg' %}" alt="St.Regis Residences">
+            </div>
+            <div class="col-6 col-lg-3 px-0">
+                <img class="home-amen" src="{% static 'main/img/666.jpg' %}" alt="St.Regis Residences">
+            </div>
+            <div class="col-6 col-lg-3 px-0">
+                <img class="home-amen" src="{% static 'main/img/777.jpg' %}" alt="St.Regis Residences">
+            </div>
+            <div class="col-6 col-lg-3 px-0 mb-2">
+                <img class="home-amen" src="{% static 'main/img/888.jpg' %}" alt="St.Regis Residences">
+            </div>
+        </div>
+    </section>
+
+    <section id="carouselExampleFade" class="mb-0 container-fluid carousel carousel-dark slide carousel-fade tumbler-off-992 mb-4"
+             data-bs-ride="carousel">
+        <div class="row carousel-inner mx-0 pt-4">
+            <div class="col-md-6 col-lg-3 px-0 carousel-item active">
+                <img class="img-fluid" src="{% static 'main/img/555.jpg' %}" alt="St.Regis Residences">
+            </div>
+            <div class="col-md-6 col-lg-3 px-0 carousel-item">
+                <img class="img-fluid" src="{% static 'main/img/666.jpg' %}" alt="St.Regis Residences">
+            </div>
+            <div class="col-md-6 col-lg-3 px-0 carousel-item">
+                <img class="img-fluid" src="{% static 'main/img/777.jpg' %}" alt="St.Regis Residences">
+            </div>
+            <div class="col-md-6 col-lg-3 px-0 carousel-item">
+                <img class="img-fluid" src="{% static 'main/img/888.jpg' %}" alt="St.Regis Residences">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back-2 pb-5 pt-3 tumbler-on-992">
+        <div class="text-center">
+            <a href="{% url 'amenities' %}" style="text-decoration: none">
+                <button class="fs-5 double-border-button but-brown-rad text-uppercase">learn more</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back mx-0 pb-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-uppercase text-center  pt-3">
+                <div class="container">
+                    <h2 class="display-4 mb-3 mt-5"><strong><b>Residences</b></strong></h2>
+                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">
+                    <p class="fs-5 mb-3">In each apartment you will find cozy bedrooms with shining bathrooms, spacious
+                        living rooms and open private terraces with a wide viewing angle of the Atlantic Ocean.</p>
+                    <a href="{% url 'about' %}">
+                        <button class="but-brown-rad text-uppercase mb-5">Learn more</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1 px-0">
+                <img class="image-style" src="{% static 'main/img/888.jpg' %}" alt="Bentley Residences">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back mt-0 mx-0">
+        <div class="row" style="height: 50vh">
+            <div class="col-lg-12 px-0">
+                <div id='map' style="height: 100%; width: 100%"></div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

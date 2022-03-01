@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "Regis-H";
+url('Arial Greek.ttf') format('ttf'), font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Regis-logo";
+url('ariblk.ttf') format('ttf'), font-style: normal;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, a, select, option, button {
+    font-family: "Regis-H", sans-serif;
+!important;
+    color: white;
+!important;
+}
+
+p, ul, li, input, .my-sel {
+    font-family: "Regis-H", sans-serif;
+!important;
+    color: #b8b897;
+!important;
+}
+
+.my-color {
+    color: #b8b897;
+!important;
+}
+
+/* === ссылки и кнопки === */
+.my-font {
+    font-family: "Regis-H", sans-serif;
+!important;
+    color: #b8b897;
+!important;
+    text-decoration: none;
+}
+
+.my-font:hover {
+    color: white;
+    fill: white;
+}
+
+.my-font:active {
+    color: #b8b897;
+    fill: #b8b897;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #b8b897;!important;
+}
+
+.footer-contacts a {
+  font-size: 16px;
+}
+.footer-info {
+  padding: 35px 0;
+  background-color: #131313;
+}
+.footer-info p {
+  color: rgba(255, 255, 255, 0.644);
+}
+.footer-info a {
+  color: rgba(255, 255, 255, 0.582);
+  text-decoration: none;
+}
+.footer-info a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.font-messages {
+        font-family: "Regis-H", sans-serif;
+!important;
+    color: #1a1e21;
+}
+

@@ -1,0 +1,29 @@
+{% extends 'main/layout/header_footer.html' %}
+{% load static %}
+
+{% block title %}Gallery{% endblock %}
+{% block activ-gallery %}active{% endblock %}
+{% block background %}<img src="{% static 'main/img/home.jpg' %}" class="background"/>{% endblock %}
+{% block st-bg %}position: absolute; width: 100%{% endblock %}
+
+{% block content %}
+
+    <section class="page-content portfolio-block pb-0 my-back" style="padding-top: 100px;!important;" id="gallery">
+        <div class="container">
+            <h2 class="display-4 text-uppercase "><strong><b>Gallery</b></strong></h2>
+            <hr class="mb-5" style="color: #b8b897; height: 2px; opacity: 1">
+            <div class="row portfolio-container gallery-1">
+                {% for i in gal_img %}
+                    <div class="col-md-4 mb-4">
+                        <figure class="media media-image equal-md-1-1"
+                                data-bp='{"imgSrc": "{{ i.gallery_img.url }}" , "parentGalleryClass": "gallery-1" }'>
+                            <span style="background-image: url('{{ i.gallery_img.url }}')"></span>
+                        </figure>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

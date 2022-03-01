@@ -1,0 +1,18 @@
+{% extends 'main/layout/header_footer.html' %}
+{% load static %}
+
+
+{% block title %}403{% endblock %}
+{% block content %}
+
+<section class="container">
+    <div class="row align-items-center">
+            <div class="col-lg-12 mt-5 text-center">
+                <h1 class="display-2 mb-3 fw-bolder">403</h1>
+                <p class="fs-4">Temporary repair works on the web-server. We apologize for the inconvenience</p>
+                <a href="{% url 'index' %}" class="but-brown-rad text-uppercase">GO HOME</a>
+            </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,148 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>St.Regis - {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/img/icons/favicon.ico' %}">
+
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/phone-code.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/theme.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/update_style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/fonts/style.css' %}">
+
+    <!-- For datepicker -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet'/>
+</head>
+<body>
+
+{% if messages %}
+    <div class="modal" tabindex="-1" id="messagesuccess">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title font-messages">Successful</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body font-messages">
+                    {% for message in messages %}
+                        {{ message|safe }}
+                    {% endfor %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="but-brown-home rounded-0" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+<header>
+    {% block header %}
+    {% endblock %}
+</header>
+
+<main style="margin-top: 84px;">
+    {% block background %} {% endblock %}
+    <div class="{% block cl-bg %} {% endblock %}" style="{% block st-bg %} {% endblock %}">
+        {% block content %}
+        {% endblock %}
+        <footer style="background-color: #212123; width: 100%">
+            {% block footer %}
+            {% endblock %}
+        </footer>
+    </div>
+</main>
+
+
+<script src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://yastatic.net/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+
+
+<script>
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                change.target.classList.add('element-show');
+            }
+        });
+    }
+
+    let options = {
+        threshold: [0.5]
+    };
+    let observer = new IntersectionObserver(onEntry, options);
+    let elements = document.querySelectorAll('.element-animation');
+
+    for (let elm of elements) {
+        observer.observe(elm);
+    }
+</script>
+
+<script src="{% static 'main/js/vendor.bundle.js' %}"></script>
+<script src="{% static 'main/js/index.bundle.js' %}"></script>
+<script src="{% static 'main/js/phone-code.js' %}"></script>
+
+<script>
+    $(window).on('load', function () {
+        $('#messagesuccess').modal('show');
+    });
+</script>
+
+{#скрипт отображения карты#}
+ <script>
+        L.mapbox.accessToken = 'pk.eyJ1Ijoic3BpcmluIiwiYSI6ImNsMDBwMnllcDBtZHgzcG54bGp6YTd1eHgifQ.TCFU_kzhYZmOH-vpoLq0-A';
+        var map = L.mapbox.map('map')
+            .setView([25.9498598022054, -80.11996815547471], 16)
+            .addLayer(L.mapbox.styleLayer('mapbox://styles/spirin/cl00p5cgr000014quhudx9wgm/draft'));
+
+        var myLayer = L.mapbox.featureLayer().addTo(map);
+
+        var geoJson = {
+            type: 'FeatureCollection',
+            features: [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-80.11996815547471, 25.9498598022054]
+                },
+                "properties": {
+                    "title": "Small astronaut",
+                    "icon": {
+                        "iconUrl": "/static/main/img/icons/marker.png",
+                        "iconSize": [50, 50], // size of the icon
+                        "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+                        "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+                        "className": "dot"
+                    }
+                }
+            }]
+        };
+
+        // Set a custom icon on each marker based on feature properties.
+        myLayer.on('layeradd', function (e) {
+            var marker = e.layer,
+                feature = marker.feature;
+
+            marker.setIcon(L.icon(feature.properties.icon));
+        });
+
+        // Add features to the map.
+        myLayer.setGeoJSON(geoJson);
+    </script>
+
+</body>
+</html>

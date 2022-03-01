@@ -1,0 +1,84 @@
+{% extends 'main/layout/header_footer.html' %}
+{% load static %}
+
+{% block title %}Amenities{% endblock %}
+{% block activ-amenities %}active{% endblock %}
+{% block background %}<img src="{% static 'main/img/home.jpg' %}" class="background"/>{% endblock %}
+{% block st-bg %}position: absolute; width: 100%{% endblock %}
+
+{% block content %}
+
+    <section class="container-fluid my-back mx-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-uppercase text-center">
+                <div class="container" style="vertical-align: middle;">
+                    <h2 class="display-4 mt-5 mb-3"><strong><b>amenities</b></strong></h2>
+                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">
+                    <p class="fs-5 mb-3">St Regis Residences will include many leisure, sports
+                        and wellness facilities, such as a private beach club.</p>
+                    <a href="{% url 'listings' %}">
+                        <button class="but-brown-rad mb-5">SHOW FLOORPLANS</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/88.jpg' %}" alt="Bentley Residences">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-uppercase text-center mt-5 mb-5">
+                <h2 class="display-6 mb-3 mt-3">THE RESIDENCES WITH RESORT AMENITIES IN THE HEART OF SUNNY ISLES
+                    BEACH</h2>
+                <hr style="color: #b8b897; height: 2px; opacity: 1">
+                <p class="fs-5 mb-3 pt-2">Uniquely offering a beach club and signature restaurant, this private
+                    residential development without a hotel component will be designed by the award-winning global
+                    architecture firm.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back-2">
+        <div class="row pb-4 pt-2">
+            <div class="col-lg-6"><img class="image-style pt-2" style="height: 70vh;"
+                                       src="{% static 'main/img/777.jpg' %}"
+                                       alt="Bentley Residences"></div>
+            <div class="col-lg-6"><img class="image-style pt-2" style="height: 70vh;"
+                                       src="{% static 'main/img/999.jpg' %}"
+                                       alt="Bentley Residences"></div>
+        </div>
+    </section>
+
+{#    <section class="container-fluid my-back mx-0 mb-0 pt-5">#}
+{#        <div class="row align-items-center">#}
+{#            <div class="col-lg-6 order-lg-1 px-0">#}
+{#                <img class="image-style" src="{% static 'main/img/666.jpg' %}" alt="Bentley Residences">#}
+{#            </div>#}
+{#            <div class="col-lg-6 text-uppercase text-center">#}
+{#                <div class="container">#}
+{#                    <h2 class="display-4 mb-3">Lorem ipsum dolor</h2>#}
+{#                    <hr class="mb-3" style="color: #b8b897; height: 1px; opacity: 1">#}
+{#                    <p class="fs-5 mb-3">Lorem ipsum dolor sit amet, consectetur#}
+{#                        adipisicing elit. Atque autem cumque cupiditate dicta eos iste laudantium necessitatibus#}
+{#                        sequi unde vitae.</p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    <section class="container-fluid my-back">#}
+{#        <div class="row justify-content-center">#}
+{#            <div class="col-lg-9 text-uppercase text-center mt-5 mb-5">#}
+{#                <hr style="color: #b8b897; height: 2px; opacity: 1">#}
+{#                <p class="fs-5 mb-3 pt-2">Lorem ipsum dolor sit amet, consectetur#}
+{#                    adipisicing elit. Asperiores deserunt distinctio doloribus illo ipsum, natus nisi sed#}
+{#                    soluta sunt ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, nisi?#}
+{#                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, odit?</p>#}
+{#                <hr style="color: #b8b897; height: 2px; opacity: 1">#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+
+{% endblock %}
